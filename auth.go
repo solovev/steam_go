@@ -73,7 +73,7 @@ func (id OpenId) AuthUrl() string {
 	return url
 }
 
-func (id *OpenId) ValidateAndReturnId() (string, error) {
+func (id *OpenId) ValidateAndGetId() (string, error) {
 	if id.Mode() != "id_res" {
 		return "", errors.New("Mode must equal to \"id_res\".")
 	}
@@ -120,8 +120,8 @@ func (id *OpenId) ValidateAndReturnId() (string, error) {
 	return digits_extraction_regexp.ReplaceAllString(openIdUrl, ""), nil
 }
 
-func (id OpenId) ValidateAndReturnUser(apiKey string) (*PlayerSummaries, error) {
-	steamId, err := id.ValidateAndReturnId()
+func (id OpenId) ValidateAndGetUser(apiKey string) (*PlayerSummaries, error) {
+	steamId, err := id.ValidateAndGetId()
 	if err != nil {
 		return nil, err
 	}

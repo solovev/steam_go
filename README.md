@@ -7,7 +7,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/solovev/steam_auth"
+	"github.com/solovev/steam_go"
 )
 
 func loginHandler(w http.ResponseWriter, r *http.Request) {

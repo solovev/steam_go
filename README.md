@@ -1,4 +1,6 @@
-# steam_auth
+# steam_go
+Simple steam auth util
+---
 
 ### Installation
 ```

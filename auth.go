@@ -1,4 +1,4 @@
-package steam_auth
+package steam_go
 
 import (
 	"errors"

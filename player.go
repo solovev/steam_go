@@ -1,4 +1,4 @@
-package steam_auth
+package steam_go
 
 import (
 	"encoding/json"
@@ -23,8 +23,8 @@ type PlayerSummaries struct {
 	RealName          string `json:"realname"`
 	PrimaryClanId     string `json:"primaryclanid"`
 	TimeCreated       int    `json:"timecreated"`
-	LocCountryCode    int    `json:"loccountrycode"`
-	LocStateCode      int    `json:"locstatecode"`
+	LocCountryCode    string `json:"loccountrycode"`
+	LocStateCode      string `json:"locstatecode"`
 	LocCityId         int    `json:"loccityid"`
 	GameId            int    `json:"gameid"`
 	GameExtraInfo     string `json:"gameextrainfo"`
